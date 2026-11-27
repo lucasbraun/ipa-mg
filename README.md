@@ -134,10 +134,10 @@ script, VM image preparation and infrastructure remain M's project work.
 
 ## Fictional content
 
-FANTASTIX, its shop, prices and opening hours are fictional. Asterix, Lucky Luke
-and Tintin are used as references to the comic collections; the SVG pictures are
-original comic-inspired illustrations and do not reproduce official book covers.
-No messages are sent and no orders or payments are accepted.
+FANTASTIX, its shop, prices and opening hours are fictional. The sample series
+(The Clockwork Orchard, The Lantern Post and Cloudberry Observatory), characters
+and cover illustrations were invented for this demo. All artwork is drawn in
+SVG code. No messages are sent and no orders or payments are accepted.
 
 References: [Rancher Desktop container engines](https://docs.rancherdesktop.io/ui/preferences/container-engine/general/),
 [official Nginx image](https://hub.docker.com/_/nginx),

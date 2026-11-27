@@ -322,10 +322,10 @@ main {
   background:#eee4ce;
   border:1px solid #e3d9c4
 }
-.book-art.west {
+.book-art.courier {
   background:#e6dfcf
 }
-.book-art.voyage {
+.book-art.sky {
   background:#dee6df
 }
 .book-art img {
@@ -336,10 +336,10 @@ main {
   transform:rotate(-8deg);
   transition:transform .25s
 }
-.book-art.west img {
+.book-art.courier img {
   transform:rotate(7deg)
 }
-.book-art.voyage img {
+.book-art.sky img {
   transform:rotate(-4deg)
 }
 .book-art:hover img {
