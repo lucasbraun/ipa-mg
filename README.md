@@ -1,6 +1,6 @@
 # FANTASTIX
 
-A small, fictional comic book shop for Mimir's platform IPA: three HTML pages,
+A small, fictional comic book shop for M's platform IPA: three HTML pages,
 one CSS file, a little vanilla JavaScript and original SVG illustrations drawn
 in code. One Nginx container serves the site. There is no database, package
 installation, frontend build step, checkout or external font/image dependency.
@@ -12,10 +12,9 @@ installation, frontend build step, checkout or external font/image dependency.
    Kubernetes is not needed by this project. You can leave its current setting
    alone. Switching engines changes which existing containers/images are visible;
    do not switch an engine that you are using for other work without considering that.
-3. In Terminal:
+3. In Terminal, open the cloned `ipa-mg` repository, then run:
 
    ```sh
-   cd /Users/lbraun/coding/ipa/ipa-mg
    ./scripts/configure-node.sh
    docker --context rancher-desktop compose up -d --wait
    ```
@@ -131,7 +130,7 @@ this sample deliberately serves HTTP inside the private network.
 The Compose file uses the versioned `nginx:1.28-alpine` tag. Record the actual
 image version/digest used for the IPA and use the same image on all backends.
 This repository supplies the sample application; the migration, deployment
-script, VM image preparation and infrastructure remain Mimir's project work.
+script, VM image preparation and infrastructure remain M's project work.
 
 ## Fictional content
 
