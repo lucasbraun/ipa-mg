@@ -1,0 +1,33 @@
+server {
+    listen 8080;
+    server_name _;
+    root /usr/share/nginx/html;
+    index index.html;
+    server_tokens off;
+
+    # Only SERVER_ID is substituted at startup; Nginx variables stay intact.
+    set $node_id "${SERVER_ID}";
+    ssi on;
+    etag off;
+    add_header X-Served-By $node_id always;
+    add_header Cache-Control "no-store" always;
+    add_header X-Content-Type-Options "nosniff" always;
+    add_header Referrer-Policy "strict-origin-when-cross-origin" always;
+    add_header Content-Security-Policy "default-src 'self'; script-src 'self'; style-src 'self'; img-src 'self'; object-src 'none'; base-uri 'none'; frame-ancestors 'none'" always;
+
+    # Cheap, stable target for the container and the future OCI load balancer.
+    location = /healthz {
+        default_type text/plain;
+        return 200 "ok\n";
+    }
+
+    # Text-only equivalent of the HTML footer, convenient for distribution tests.
+    location = /__node {
+        default_type text/plain;
+        return 200 "${SERVER_ID}\n";
+    }
+
+    location / {
+        try_files $uri $uri/ =404;
+    }
+}
